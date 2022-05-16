@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+a:hover {
+    color: #faa406;
+    opacity:0.7;
+
+}
+
+.logo {
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+}
+
+nav {
+    display: flex; 
+    justify-content: space-around; 
+    align-items: center; 
+    font-family: system-ui,-apple-system, Helvetica, Arial, sans-serif;
+    background: #052f8b ;
+    height: 10vh;
+
+}
+
+
+.nav-list {
+    list-style: none;
+    display: flex;
+}
+
+.nav-list li {
+    letter-spacing: 3px;
+    margin-left: 32px;
+}
+.mobile-menu {
+    display: none;
+    cursor: pointer;
+}
+
+.mobile-menu div {
+    width: 32px;
+    height: 2px; 
+    background: #fff;
+    margin: 8px;
+    transition: 0.3s;
+}
+
+@media (max-width: 999px) {
+    body{
+        overflow-x: hidden;
+    }
+    .nav-list {
+        position: absolute;
+        top: 8vh;
+        right: 0;
+        width: 50vw;
+        height: 92vh;
+        background:#052f8b;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in;
+       
+    }
+    .nav-list li {
+        margin-left: 0;
+        opacity: 0;
+        
+    }
+    .mobile-menu {
+        display: block;
+    }
+}
+
+.nav-list.active {
+    transform: translateX(0);
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.mobile-menu.active .line1 {
+    transform: rotate(-45deg) translate(-8px, 8px);
+}
+
+.mobile-menu.active .line2 {
+    opacity: 0;
+}
+
+.mobile-menu.active .line3{
+transform: rotate(45deg) translate(-5px, -7px);
+}
+.circle-image {
+    display:inline-block;
+    border-radius: 100%;
+    object-fit:cover;
+    width: 60px;
+    height: 40px;
+    
+ 
+}
+.circle-image img {
+    width: 110%;
+    height: 110%;
+    object-fit:cover;
+
+}
+h1{
+    
+    font-family: system-ui,-apple-system, Helvetica, Arial, sans-serif;
+    color: #052f8b;
+    text-indent: 130px;
+}
+p{
+    text-align: justify;
+    text-indent: 130px;
+    font-family: system-ui,-apple-system, Helvetica, Arial, sans-serif;
+}
+.space{
+    height: 50px;
+   
+}
